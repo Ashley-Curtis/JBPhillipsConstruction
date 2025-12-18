@@ -23,7 +23,8 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -2147,6 +2148,18 @@ input, select, textarea {
 
 		}
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* Section/Article */
 
 	section.special, article.special {
@@ -2162,12 +2175,13 @@ input, select, textarea {
 	}
 
 	header ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 0;
-    margin: 0;
+		background: #1c1d26;
+		list-style: none;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 0;
+		margin: 0;
 	}
 
 	header li {
@@ -2176,8 +2190,8 @@ input, select, textarea {
 	}
 
 	.profile-img {
-		width: 40px;          /* size of the circle */
-		height: 40px;         /* same as width for perfect circle */
+		width: 45px;          /* size of the circle */
+		height: 45px;         /* same as width for perfect circle */
 		border-radius: 50%;   /* makes it circular */
 		object-fit: cover;    /* ensures image fills circle without distortion */
 		cursor: pointer;      /* optional: pointer on hover */
@@ -2222,7 +2236,7 @@ input, select, textarea {
 	}
 
 		header.major:after {
-			background: #e44c65;
+			background: #ba9248;
 			content: '';
 			display: inline-block;
 			height: 0.2em;
@@ -2554,7 +2568,6 @@ input, select, textarea {
 	}
 
 		.image:before {
-			content: '';
 			display: block;
 			position: absolute;
 			left: 0;
@@ -2735,6 +2748,20 @@ input, select, textarea {
 				width: 100%;
 			}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		@media screen and (max-width: 480px) {
 
 			ul.actions:not(.fixed) {
@@ -2785,6 +2812,16 @@ input, select, textarea {
 						}
 
 		}
+
+
+
+
+
+
+
+
+
+
 
 /* Table */
 
@@ -2934,7 +2971,7 @@ input, select, textarea {
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
-			background-color: #7d6d6d;
+			background-color: #ba9248;
 			box-shadow: none;
 			color: #ffffff !important;
 		}
@@ -3006,7 +3043,6 @@ input, select, textarea {
 		background-attachment: fixed;
 		background-position: center center;
 		background-size: cover;
-		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
 		height: 100vh;
 		overflow: hidden;
 		position: relative;
@@ -3014,15 +3050,37 @@ input, select, textarea {
 
 	.spotlight h2 {
 		font-family: 'Times New Roman', Times, serif;
-		font-size: 900;
+		font-size: 45px;
+		margin-top: -50px;
+		margin-left: -50px
 	}
 
-	.spotlight.image {
+	.spotlight header p {
+		font-size: 18px;
+		font-weight: 600;
+		margin-left: -50px;
+		margin-top: 25px;
+		line-height: inherit;
+	}
+	.spotlight p {
+		color: white;
+		font-size: 15px;
+		font-weight: 400;
+		margin-left: 100px;
+		margin-right: -50px;
+		line-height: 1.5em;
+	}
+
+	#one .spotlight.image {
+		background-image: url("../../images/BusinessCard.png") !important;
 		position: absolute;
-		top: 5%;    /* adjust position */
-		left: 20%;
-		width: auto; /* overlay size */
-		height: auto;
+		background-size: 1280px; 
+		background-repeat: no-repeat;
+		top: 24%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 90%; 
+		height: 47vh;
 	}
 
 		.spotlight:nth-last-of-type(1) {
@@ -3107,14 +3165,24 @@ input, select, textarea {
 
 		.spotlight:before {
 			background-image: url("images/overlay.png");
-			content: '';
 			display: block;
 			height: 100%;
 			left: 0;
 			top: 0;
 			width: 100%;
+			position: absolute;
+    		z-index: 1;
 		}
 
+		.about-images .spotlight .image {
+			position: absolute !important;
+			margin-top: 30%;
+			top: 100%;
+			left: 50%;
+			width: 50%;
+			transform: translate(-60%, -50%);  /* center it */
+			z-index: 2; 
+		}
 		.spotlight .image.main {
 			display: none;
 		}
@@ -3136,6 +3204,12 @@ input, select, textarea {
 			border-style: solid;
 			opacity: 1;
 			position: absolute;
+		}
+
+		.about-images {
+			position: relative;
+			width: 100%;     
+			height: 920px;   
 		}
 
 		.spotlight .goto-next {
@@ -3188,7 +3262,7 @@ input, select, textarea {
 		}
 
 		.spotlight.style1 .content {
-			border-color: #e44c65;
+			border-color: #ba9248;
 		}
 
 		.spotlight.style2 .content {
@@ -3245,9 +3319,9 @@ input, select, textarea {
 
 /* Wrapper */
 
-	.wrapper {
-		padding: 6em 0 4em 0;
-	}
+	/*.wrapper {
+		padding: 0 0 4em 0;
+	}*/
 	
 			.wrapper.style2 input[type="text"]:focus,
 			.wrapper.style2 input[type="password"]:focus,
@@ -3323,7 +3397,7 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-		.wrapper.fade-up > .container {
+		.fade-up > .container {
 			-moz-transform: translate(0,0);
 			-webkit-transform: translate(0,0);
 			-ms-transform: translate(0,0);
@@ -3335,7 +3409,7 @@ input, select, textarea {
 			opacity: 1;
 		}
 
-		.wrapper.fade-up.inactive > .container {
+		.fade-up.inactive > .container {
 			-moz-transform: translate(0,1em);
 			-webkit-transform: translate(0,1em);
 			-ms-transform: translate(0,1em);
@@ -3354,6 +3428,20 @@ input, select, textarea {
 		.wrapper.fade.inactive > .container {
 			opacity: 0;
 		}
+
+/* Services */
+
+		#four .container {
+			background-image: url("../../images/banner.jpg");	
+			width: 100% !important;
+			margin: 0 !important;
+			padding: 50px;
+			box-sizing: unset;
+		}
+		#four .wrapper {
+			height: auto;
+		}
+
 
 /* Dropotron */
 
@@ -3454,10 +3542,27 @@ input, select, textarea {
 			right: 0 !important;
 			left: 0 !important;
 		}
+		.social-icons {
+			color:#1877F2; 
+			right:0 !important; 
+			left:0 !important; 
+			margin-right: 0em !important;
+		}
+		.social-icons {
+			color:#0A66C2;
+			left:0 !important;
+		}
+		.social-links {
+			display: none;
+		}
+		.social-links {
+			display: none;
+		}
 
 			#header nav ul {
 				margin: 0;
-				color: #7d6d6d;
+				color: #ba9248;
+				height: 58px;
 			}
 
 				#header nav ul li {
@@ -3493,6 +3598,23 @@ input, select, textarea {
 						display: none;
 					}
 
+					.social-icons {
+						color:#1877F2; 
+						right:0 !important; 
+						left:0 !important; 
+						margin-right: 0em !important;
+					}
+					.social-icons {
+						color:#0A66C2;
+						left:0 !important;
+					}
+					.social-links {
+						display: none;
+					}
+					.social-links {
+						display: none;
+					}
+
 	body.landing #page-wrapper {
 		padding-top: 0;
 	}
@@ -3509,7 +3631,7 @@ input, select, textarea {
 		text-decoration: none !important;
 		background-attachment: fixed;
 		background-color: #4f7283;
-		background-image: url("../../images/banner.jpg");
+		background-image: url("../../images/hero.png");
 		background-position: center center;
 		background-size: cover;
 		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
@@ -3522,7 +3644,7 @@ input, select, textarea {
 		#banner:before {
 			content: '';
 			display: inline-block;
-			height: 90vh;
+			height: 80vh;
 			vertical-align: middle;
 			width: 1%;
 		}
@@ -3549,7 +3671,7 @@ input, select, textarea {
 			font-size: 25px;
 			text-decoration: none !important;
 			z-index: 1;         
-			gap: 15px;        /* space between phone and email */
+			gap: 15px;        /* space between icon and text */
 		}
 
 		.icon-link {
@@ -3572,7 +3694,7 @@ input, select, textarea {
 			display: inline-block;
 			margin-right: 1%;
 			max-width: 95%;
-			padding: 6em;
+			padding: 0 6em 6em 6em;
 			position: relative;
 			text-align: left;
 			vertical-align: middle;
@@ -3809,7 +3931,7 @@ input, select, textarea {
 
 		/* Wrapper */
 
-			.wrapper {
+			#five .wrapper {
 				padding: 4.5em 0 2.5em 0;
 			}
 
@@ -3890,7 +4012,7 @@ input, select, textarea {
 
 		/* Wrapper */
 
-			.wrapper {
+			#five .wrapper {
 				padding: 4.5em 2.5em 2.5em 2.5em;
 			}
 
@@ -3931,7 +4053,7 @@ input, select, textarea {
 
 	#navPanel, #titleBar {
 		display: none;
-	}
+	} 
 
 	@media screen and (max-width: 736px) {
 
@@ -3959,16 +4081,12 @@ input, select, textarea {
 
 		/* Section/Article */
 
-			header p br {
-				display: none;
-			}
-
 			header h2 + p {
 				font-size: 1em;
 			}
 
-			header h3 + p {
-				font-size: 1em;
+			header p {
+				font-size: 5pt;
 			}
 
 			header h4 + p,
@@ -3980,6 +4098,24 @@ input, select, textarea {
 			header.major {
 				margin: 0 0 2em 0;
 			}
+
+			header .profile {
+				height: 20px !important;
+				width: 20px !important;
+				margin: 0;
+				padding: 0;
+			}
+			.profile-img {
+				width: 20px;          /* size of the circle */
+				height: 20px;         /* same as width for perfect circle */
+				border-radius: 50%;   /* makes it circular */
+				object-fit: cover;    /* ensures image fills circle without distortion */
+			}
+
+			#navPanel .social-links {
+				display: none !important;
+			}
+
 
 		/* Goto Next */
 
@@ -4004,10 +4140,50 @@ input, select, textarea {
 					padding: 3.25em 1.5em 1.25em 1.5em !important;
 				}
 
+				#one .spotlight.image {
+					background-image: url("../../images/Jeremy.jpg") !important;
+					position: absolute;
+					background-size: 320px; 
+					transform: none;
+					top: 9% !important;    /* adjust position */
+					left: 5.5% !important;
+					width: 40vh; /* overlay size */
+					height: 40vh;
+				}
+				.about-images {
+					position: relative;
+					width: 100%;     
+					height: 420px;   
+				}
+
+				#one .content{
+					margin-bottom: 20px;
+				}
+				#one .content h2 {
+					font-size: 3em;
+					margin: -20px 0 10px 0;
+				}
+				#one .content header p {
+					font-size: 1em;
+					margin: 20px;
+				}
+				#one .content p {
+					font-size: 1em;
+					margin: 20px;
+				}
+
 		/* Wrapper */
 
-			.wrapper {
+			#five .wrapper {
 				padding: 3.25em 1.5em 1.25em 1.5em;
+			}
+
+			#four .container {
+				width: 80% !important;
+				padding: 40px;
+			}
+			#four .wrapper {
+				height: auto;
 			}
 
 		/* Header */
@@ -4038,6 +4214,31 @@ input, select, textarea {
 					#banner .content .image {
 						height: 9em;
 						width: 9em;
+						margin: 40px 0 60px 0 !important;
+					}
+
+					#banner .content .banner-icons a {
+						display: block;
+						margin: 60px 0 0 0;
+						padding: 0;
+						font-size: 10px;
+						gap: 8px;
+						margin-bottom: 0;
+					}
+					.icon-link .banner-icon-text {
+						font-size: 15px;    /* text size */
+						font-family: inherit;
+						margin: 0;
+						padding: 0;
+					}
+					.icon-link {
+						margin: 0 !important;
+						padding: 0;
+					}
+					.icon-link i {
+						font-size: 18px;    /* icon size */
+						margin: 0;
+						padding: 0;
 					}
 
 		/* Nav */
@@ -4114,7 +4315,7 @@ input, select, textarea {
 					}
 
 					#titleBar .toggle:before {
-						background: #e44c65;
+						background: #ba9248;
 						color: rgba(255, 255, 255, 0.5);
 						content: '\f0c9';
 						display: block;
@@ -4126,7 +4327,7 @@ input, select, textarea {
 						text-align: center;
 						top: 0;
 						width: 54px;
-					}
+					} 
 
 			#navPanel {
 				-moz-backface-visibility: hidden;
@@ -4141,7 +4342,7 @@ input, select, textarea {
 				-webkit-transition: -webkit-transform 0.5s ease;
 				-ms-transition: -ms-transform 0.5s ease;
 				transition: transform 0.5s ease;
-				display: block;
+				/*display: block;*/
 				height: 100%;
 				left: 0;
 				overflow-y: auto;
@@ -4149,7 +4350,7 @@ input, select, textarea {
 				top: 0;
 				width: 275px;
 				z-index: 10002;
-				background: #181920;
+				background: #201b18;
 				padding: 0.75em 1.25em;
 			}
 
@@ -4265,7 +4466,7 @@ input, select, textarea {
 
 		/* Wrapper */
 
-			.wrapper {
+			#five .wrapper {
 				padding: 3em 1.25em 1em 1.25em;
 			}
 
