@@ -3048,21 +3048,21 @@ input, select, textarea {
 		position: relative;
 	}
 
-	.spotlight h2 {
+	#one .spotlight h2 {
 		font-family: 'Times New Roman', Times, serif;
 		font-size: 45px;
 		margin-top: -50px;
 		margin-left: -50px
 	}
 
-	.spotlight header p {
+	#one .spotlight header p {
 		font-size: 18px;
 		font-weight: 600;
 		margin-left: -50px;
 		margin-top: 25px;
 		line-height: inherit;
 	}
-	.spotlight p {
+	#one .spotlight p {
 		color: white;
 		font-size: 15px;
 		font-weight: 400;
@@ -4051,9 +4051,9 @@ input, select, textarea {
 
 /* Small */
 
-	#navPanel, #titleBar {
+	/*#navPanel, #titleBar {
 		display: none;
-	} 
+	} */
 
 	@media screen and (max-width: 736px) {
 
@@ -4174,17 +4174,48 @@ input, select, textarea {
 
 		/* Wrapper */
 
-			#five .wrapper {
-				padding: 3.25em 1.5em 1.25em 1.5em;
+			#five {
+				margin: 3em 0 3em 0;
+			}
+			#five form {
+				margin: 0 2em 0 2em;
 			}
 
 			#four .container {
 				width: 80% !important;
 				padding: 40px;
+				margin: 20px;
+				box-sizing: content-box;
 			}
 			#four .wrapper {
 				height: auto;
 			}
+			#four .box.alt {
+				display: flex;
+				justify-content: center; /* horizontal */
+				align-items: center;     /* vertical */
+				text-align: center; 
+			}
+			#four .icon.major{
+				line-height: 7em !important;
+				margin-bottom: 0 !important;
+			}
+			#four .container {
+				background-repeat: no-repeat;
+				background-size: cover;
+    			background-position: bottom;
+			}
+
+		/* Reviews */
+			#reviews {
+				padding: 60px 0;
+				margin: 0;
+			}
+			.testimonials-container {
+				padding-top: 0;
+				margin-top: 0;
+			}
+
 
 		/* Header */
 
